@@ -1,55 +1,66 @@
 ---
-name: portfolio-de-[nombre]
+name: srtimador-portfolio
+version: 2
+theme: brutalist-dark
 colors:
-  primary: "#1A1C1E"          # tu color principal (oscuro)
-  accent: "#E63946"           # tu acento (un único color llamativo)
-  background: "#F8F9FA"       # fondo casi blanco
-  text: "#1A1C1E"             # texto principal
-  muted: "#6C757D"            # texto secundario / pies de foto
+  bg-primary: "#0a0a0a"
+  bg-secondary: "#111111"
+  bg-card: "#161616"
+  accent: "#E63946"
+  text-primary: "#e8e8e8"
+  text-secondary: "#888888"
+  text-muted: "#555555"
+  border: "#2a2a2a"
 typography:
-  heading:
-    fontFamily: "Space Grotesk, sans-serif"
-    fontSize: "2.5rem"
-    fontWeight: 700
-    lineHeight: 1.1
+  display:
+    fontFamily: "Bebas Neue, sans-serif"
+    use: "Títulos, navegación, stats"
   body:
-    fontFamily: "Inter, sans-serif"
-    fontSize: "1rem"
-    lineHeight: 1.6
+    fontFamily: "JetBrains Mono, monospace"
+    use: "Texto, labels, tags"
 spacing:
   xs: "4px"
   sm: "8px"
   md: "16px"
   lg: "32px"
   xl: "64px"
+  "2xl": "96px"
+breakpoints:
+  mobile: "default"
+  tablet: "600px"
+  desktop: "768px"
+  wide: "1024px"
 ---
 
 ## Overview
 
-Portfolio personal de [nombre], estudiante de 1º GM. Tono: **minimalista, técnico, sin
-ruido visual**. La página tiene que sentirse limpia y rápida.
+Portfolio personal de SrTimador, estudiante de 1º GS Informática en SALESIANOS LOS BOSCOS.
+
+**Estética**: Brutalista oscura. Tipografía industrial. Sin concesiones.
 
 ## Colors
 
-La paleta es deliberadamente sobria: un fondo casi blanco, un texto profundo y un
-**único** acento para llamadas a la acción y enlaces destacados. Si dudas si añadir un
-color nuevo, no lo hagas.
+- Fondo principal casi negro (`#0a0a0a`), secundario ligeramente más claro
+- Acento rojo `#E63946` para CTAs y highlights
+- Texto en escala de grises sobre fondo oscuro
+- Bordes sutiles `#2a2a2a`
 
 ## Typography
 
-- Heading: `Space Grotesk` — sans serif geométrico, da personalidad sin estridencias.
-- Body: `Inter` — humanista, legible en párrafos largos.
-- Sin más familias. Sin cursivas decorativas.
+- **Display**: Bebas Neue — condensada, alta, impactante para títulos
+- **Body**: JetBrains Mono — monospace técnica, vibe developer
 
 ## Layout
 
-Mobile-first. Una sola columna por defecto; a partir de 768px puede haber dos.
-Anchura máxima del contenido: 720px.
+- Mobile-first. Una columna por defecto, grid en 600px+
+- Max-width contenido: 720px
+- Secciones alternan fondo primario/secundario
 
 ## Do's and Don'ts
 
-- ✅ Usa siempre `{spacing.md}` o múltiplos como gap base.
-- ✅ Bordes sutiles (`1px solid {colors.muted}`) en lugar de sombras.
-- ❌ Nada de degradados.
-- ❌ Nada de sombras blandas.
-- ❌ Nada de iconos ornamentales.
+- ✅ Texto en minúsculas para labels y tags
+- ✅ Números de sección (01, 02, 03...)
+- ✅ Bordes `1px solid var(--border)`
+- ❌ Nada de sombras blandas
+- ❌ Nada de degradados genéricos
+- ❌ Nada de border-radius redondeados

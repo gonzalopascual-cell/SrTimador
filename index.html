@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SrTimador - Inicio</title>
+  <title>SrTimador</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="noise" aria-hidden="true"></div>
+
   <nav class="nav">
-    <a href="index.html" class="nav__logo">SrTimador</a>
+    <a href="index.html" class="nav__logo">SrTimador<span class="nav__dot">.</span></a>
     <ul class="nav__links">
       <li><a href="portfolio.html">Portfolio</a></li>
     </ul>
   </nav>
 
   <main class="hero">
+    <div class="hero__bg-lines" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
     <div class="hero__content">
-      <p class="hero__greeting">Bienvenido a</p>
-      <h1 class="hero__title">Mi Portfolio</h1>
-      <p class="hero__subtitle">Desarrollo web con HTML y CSS puro</p>
-      <a href="portfolio.html" class="btn">Ver portfolio</a>
+      <p class="hero__tag">// portfolio personal</p>
+      <h1 class="hero__title">
+        <span class="hero__line">Sr</span><span class="hero__line hero__line--accent">Timador</span>
+      </h1>
+      <p class="hero__subtitle">HTML + CSS — Mobile First</p>
+      <a href="portfolio.html" class="btn btn--primary">Entrar</a>
     </div>
   </main>
 
   <footer class="footer">
-    <p>&copy; 2026 SrTimador. Todos los derechos reservados.</p>
+    <div class="footer__bottom">
+      <p>&copy; 2026 SrTimador</p>
+      <p class="footer__made">Hecho con HTML + CSS</p>
+    </div>
   </footer>
 </body>
 </html>
