@@ -1,10 +1,10 @@
 # Sobre este proyecto
 
-Es el portfolio personal de **[Nombre]**, estudiante de 1º GM Informática en **[centro]**.
+Es el portfolio personal de SrTimador, estudiante de 1º GS Informática en SALESIANOS LOS BOSCOS.
 
 # Sobre mí
 
-- Me gusta **[videojuegos / música / deporte / lo que sea]**.
+- Me gusta el Call Of Duty MW2.
 - Mis lenguajes favoritos hasta ahora: HTML, CSS, **[Python / JS / ...]**.
 - Quiero dedicarme a **[desarrollo web / videojuegos / ciberseguridad / ...]**.
 
