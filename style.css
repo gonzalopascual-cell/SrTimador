@@ -1,0 +1,353 @@
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #1A1C1E;
+  --color-accent: #E63946;
+  --color-background: #F8F9FA;
+  --color-text: #1A1C1E;
+  --color-muted: #6C757D;
+  --color-white: #FFFFFF;
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Navegación */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-muted);
+  z-index: 1000;
+}
+
+.nav__logo {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.nav__logo:hover {
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--spacing-lg);
+  list-style: none;
+}
+
+.nav__links a {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.nav__links a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-xl) var(--spacing-md);
+}
+
+.hero__greeting {
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.hero__title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero__subtitle {
+  color: var(--color-muted);
+  font-size: 1rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background: var(--color-accent);
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  border: 1px solid var(--color-accent);
+  border-radius: 0;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn:hover {
+  background: var(--color-white);
+  color: var(--color-accent);
+  transform: none;
+  text-decoration: none;
+}
+
+/* Secciones */
+.section {
+  padding: var(--spacing-xl) var(--spacing-md);
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.section--alt {
+  background-color: var(--color-white);
+  max-width: 100%;
+}
+
+.section--alt > .section__title,
+.section--alt > .skills,
+.section--alt > .projects,
+.section--alt > .contact__text,
+.section--alt > .btn {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section__title {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+/* Identidad */
+.identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+  border: 1px solid var(--color-muted);
+  padding: var(--spacing-lg);
+}
+
+.identity__ascii {
+  font-family: monospace;
+  font-size: 0.7rem;
+  line-height: 1.1;
+  color: var(--color-primary);
+  white-space: pre;
+  margin: 0;
+}
+
+.identity__info {
+  text-align: center;
+}
+
+.identity__name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--spacing-sm);
+}
+
+.identity__label {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: var(--spacing-xs);
+}
+
+.identity__list {
+  list-style: none;
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.identity__list li {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-muted);
+}
+
+/* Sobre mí */
+.about__text p {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-muted);
+}
+
+/* Skills */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.skill-card {
+  background: var(--color-white);
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-muted);
+}
+
+.skill-card:hover {
+  border-color: var(--color-accent);
+}
+
+.skill-card__title {
+  font-size: 1.25rem;
+  color: var(--color-accent);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Proyectos */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.project-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-muted);
+  transition: border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: var(--color-accent);
+}
+
+.project-card__content {
+  padding: var(--spacing-lg);
+}
+
+.project-card__title {
+  font-size: 1.25rem;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-card__desc {
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.project-card__tags {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: transparent;
+  color: var(--color-accent);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-accent);
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+}
+
+/* Contacto */
+.contact__text {
+  text-align: center;
+  color: var(--color-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--color-muted);
+}
+
+/* Tablet y desktop */
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .identity {
+    flex-direction: row;
+    text-align: left;
+    gap: var(--spacing-xl);
+  }
+
+  .identity__info {
+    text-align: left;
+  }
+
+  .identity__list {
+    justify-content: flex-start;
+  }
+
+  .skills {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav {
+    padding: var(--spacing-md) var(--spacing-lg);
+  }
+}
